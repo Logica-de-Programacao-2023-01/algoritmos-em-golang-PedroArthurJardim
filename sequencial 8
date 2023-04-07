@@ -1,0 +1,19 @@
+//Faça um algoritmo que leia o número de dias trabalhados por um funcionário e o valor da sua diária e calcule o seu salário.
+
+package main
+
+import "fmt"
+
+func main() {
+    var dt int
+    var vd float64
+  fmt.Print("Infotme a quantidade de dias trabalhados ")
+  fmt.Scan(&dt)
+
+  fmt.Print("Informe o valor da diária ")
+  fmt.Scan(&vd)
+
+  salario := float64(dt) * vd
+  fmt.Print("O valor do salario é: ", salario)
+  
+  }
