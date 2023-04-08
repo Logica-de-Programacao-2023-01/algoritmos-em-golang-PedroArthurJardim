@@ -1,0 +1,47 @@
+//Faça um algoritmo que leia a altura e o sexo de uma pessoa e mostre se ela está abaixo, dentro ou acima do peso ideal
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+  var altura float64
+  var sexo string
+  var peso float64
+  fmt.Print("Informe a altura em metros ")
+  fmt.Scan(&altura)
+  fmt.Print("Informe o sexo (Masculino ou Feminino) ")
+  fmt.Scan(&sexo)
+  
+  if sexo != "Masculino" && sexo != "Feminino"{
+     fmt.Print("Sexo inválido ")
+    return
+   } 
+  
+  fmt.Print("Informe seu peso em kg ")
+  fmt.Scan(&peso)
+
+  IMC := peso / (altura * altura)
+
+  if sexo == "Masculino" && IMC < 18.5 {
+    fmt.Print("Está abaixo do peso ideal ")
+  } else if IMC < 25{
+    fmt.Print("Está no peso ideal ")
+  } else if IMC < 30{
+    fmt.Print("Está acima do peso ideal ")
+  } else {
+    fmt.Print("Está muito acima do peso ideal")
+  }
+  if sexo == "Feminino" && IMC < 19 {
+    fmt.Print("Está abaixo do peso ideal ")
+  } else if IMC < 23.9{
+    fmt.Print("Está no peso ideal ")
+  } else if IMC < 28.9{
+    fmt.Print("Está acima do peso ideal ")
+  } else {
+    fmt.Print("Está muito acima do peso ideal")
+  } 
+   
+}
